@@ -6,10 +6,10 @@
 case "$1" in
   start)
         echo "Starting XBMC..."
-	export LD_LIBRARY_PATH=/usr/lib:/usr/lib/mysql:/lib
-	export GCONV_PATH=/usr/lib/gconv
+        export LD_LIBRARY_PATH=/usr/lib/mysql:$LD_LIBRARY_PATH
+        export GCONV_PATH=/usr/lib/gconv
 	export XBMC_HOME=/usr/share/xbmc
-        REMOTECONF=/etc/xbmc/remote.conf
+     	REMOTECONF=/etc/xbmc/remote.conf
         if [ -f /root/.xbmc/remote.conf ]; then
             REMOTECONF=/root/.xbmc/remote.conf
         fi
@@ -61,7 +61,6 @@ case "$1" in
             esac
             echo "XBMC crashed with exit code $exit_value.  Respawning.." >&2
             sleep 1
-	    exit 0
         done
         ;;
   stop)

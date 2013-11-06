@@ -4,9 +4,9 @@
 #
 #################################################################################
 
-XBMC_VERSION = f63fcaac1af1e53204b4c20429bf76d9f1ddac0a
+XBMC_VERSION = f6047e3b9559b063e5cc9c68ee640b556cee62e2
 XBMC_SITE_METHOD = git
-XBMC_SITE = git://github.com/Stane1983/xbmc.git
+XBMC_SITE = git://github.com/j1nx/xbmc.git
 XBMC_INSTALL_STAGING = YES
 XBMC_INSTALL_TARGET = YES
 
@@ -14,7 +14,8 @@ XBMC_DEPENDENCIES = host-lzo host-sdl_image
 
 XBMC_CONF_OPT+= --enable-neon --enable-gles --disable-sdl --disable-x11 --disable-xrandr \
   --disable-projectm --enable-debug --disable-joystick --with-cpu=cortex-a9 \
-  --enable-codec=amcodec --enable-player=amlplayer 
+  --enable-codec=amcodec --enable-player=amlplayer
+
 ifneq ($(BR2_CCACHE),y)
 XBMC_CONF_OPT+= --disable-ccache
 endif
@@ -36,20 +37,10 @@ ifeq ($(BR2_PACKAGE_LIBAMPLAYERM3),y)
 XBMC_DEPENDENCIES += libamplayerm3
 endif
 
-ifeq ($(BR2_PACKAGE_LIBAMPLAYERM6),y)
-XBMC_DEPENDENCIES += libamplayerm6
-endif
-
 ifneq ($(BR2_XBMC_REMOTE_CONF),)
 XBMC_REMOTE_CONF = $(BR2_XBMC_REMOTE_CONF)
 else
 XBMC_REMOTE_CONF = remote.conf
-endif
-
-ifneq ($(strip $(BR2_XBMC_SPLASH)),"")
-XBMC_SPLASH_FILE = $(BR2_XBMC_SPLASH)
-else
-XBMC_SPLASH_FILE = package/thirdparty/xbmc/splash.png
 endif
 
 XBMC_CONF_ENV += PYTHON_VERSION="$(PYTHON_VERSION_MAJOR)"
@@ -71,17 +62,14 @@ define XBMC_INSTALL_ETC
   cp -f package/thirdparty/xbmc/guisettings.xml $(TARGET_DIR)/usr/share/xbmc/system/
   cp -f package/thirdparty/xbmc/advancedsettings.xml $(TARGET_DIR)/usr/share/xbmc/system/
   cp -f package/thirdparty/xbmc/nobs.xml $(TARGET_DIR)/usr/share/xbmc/system/keymaps/
-  cp -f package/thirdparty/xbmc/variant.gbox.keyboard.xml $(TARGET_DIR)/usr/share/xbmc/system/keymaps/
 endef
 
-ifneq ($(XBMC_REMOTE_CONF),"")
 define XBMC_INSTALL_REMOTE_CONF
   cp -f package/thirdparty/xbmc/etc/xbmc/$(XBMC_REMOTE_CONF) $(TARGET_DIR)/etc/xbmc/remote.conf
 endef
-endif
 
 define XBMC_INSTALL_SPLASH
-  cp -f $(XBMC_SPLASH_FILE) $(TARGET_DIR)/usr/share/xbmc/media/Splash.png
+  cp -f package/thirdparty/xbmc/tlbb_splash.png $(TARGET_DIR)/usr/share/xbmc/media/Splash.png
 endef
 
 define XBMC_CLEAN_UNUSED_ADDONS

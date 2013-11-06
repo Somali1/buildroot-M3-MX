@@ -79,9 +79,10 @@ config BR2_PACKAGE_XBMC
 	select BR2_PACKAGE_BOBLIGHT
 	select BR2_PACKAGE_XBMCPVR
 	select BR2_PACKAGE_LIBCEC
+
 	select BR2_PACKAGE_LIBAMPLAYERM3 if BR2_BOARD_TYPE_AMLOGIC_M3
 	select BR2_PACKAGE_LIBAMPLAYERM1 if BR2_BOARD_TYPE_AMLOGIC_M1
-	select BR2_PACKAGE_LIBAMPLAYERM6 if BR2_BOARD_TYPE_AMLOGIC_M6
+
 	help
 	xbmc
 
@@ -92,10 +93,4 @@ config BR2_XBMC_REMOTE_CONF
 	default ""
 	help
 	  File to copy to remote.conf in /etc/xbmc directory.
-
-config BR2_XBMC_SPLASH
-	string "XBMC splash screen (1280x720 png)
-	default ""
-	help
-	  Splash screen which will replace default one
 

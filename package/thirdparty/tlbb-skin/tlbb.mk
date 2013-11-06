@@ -1,6 +1,6 @@
-TLBB_VERSION = 522b30b0eb74e1d7ec1b73b94eda3f95d65742f9
+TLBB_VERSION = 35d8f2738c58a654ca98bea83c13d72707f00e04
 TLBB_SITE_METHOD = git
-TLBB_SITE = git://github.com/j1nx/TLBB.git
+TLBB_SITE = git@github.com:j1nx/tlbb.git
 TLBB_INSTALL_STAGING = YES
 TLBB_INSTALL_TARGET = YES
 TLBB_DEPENDENCIES = xbmc
@@ -21,4 +21,4 @@ define TLBB_INSTALL_TARGET_CMDS
 	cp -f $(@D)/media/Textures.xbt $(TARGET_DIR)/usr/share/xbmc/addons/skin.tlbb/media
 endef
 
-$(eval $(call generic-package,package/thirdparty,tlbb))
+$(eval $(call autotools-package))

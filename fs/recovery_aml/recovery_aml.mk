@@ -118,9 +118,8 @@ ifneq ($(strip $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG)),"")
 
 ROOTFS_RECOVERY_AML_CMD += \
     echo "Copy recovery.img..." && \
-    cp -f $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG) $(BINARIES_DIR)/aml_recovery/recovery.img && 
-
-ADDITIONAL_FILES += " recovery.img"
+    cp -f $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG) $(BINARIES_DIR)/aml_recovery/recovery.img &&
+    ADDITIONAL_FILES += " recovery.img"
 endif
 
 ROOTFS_RECOVERY_AML_CMD += \

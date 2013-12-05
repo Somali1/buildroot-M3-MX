@@ -27,6 +27,4 @@ define ROOTFS_TAR_AML_CMD
  tar --anchored --exclude=\"./usr/*\" -cf $(BINARIES_DIR)/rootfs.tar -C $(TARGET_DIR) . && $(TAR_AML_CLEANUP)
 endef
 
-
-
 $(eval $(call ROOTFS_TARGET,tar_aml))

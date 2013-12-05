@@ -49,16 +49,16 @@ if [ "X$1" = "Xstart" ]; then
   echo "S10setup: mounting /tmp/userdata"
   # find userdata via mtd partition name, mount it and bind to /root
   for i in `ls /dev/mtd* | grep -o "mtd[0-9]$"`; do
-    if [[ "`cat /sys/devices/platform/mtd/$i/name`" == "userdata" ]]; then
-      USERDATA="/dev/"`ls /sys/devices/platform/mtd/$i | grep -o mtdblock[0-9]`
+    if [[ "`cat /sys/devices/virtual/mtd/$i/name`" == "userdata" ]]; then
+      USERDATA="/dev/"`ls /sys/devices/virtual/mtd/$i | grep -o mtdblock[0-9]`
       break
     fi
   done
 
   mkdir -p /tmp/userdata
   mount -t yaffs2 $USERDATA /tmp/userdata
-  mkdir -p /tmp/userdata/xios/root
-  mount -o bind /tmp/userdata/xios/root /root
+  mkdir -p /tmp/userdata/tlbb/root
+  mount -o bind /tmp/userdata/tlbb/root /root
   #
   echo "S10setup: remount / ro"
   mount -o remount,ro /

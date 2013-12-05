@@ -97,7 +97,7 @@ config BR2_cortex_a9
 	bool "cortex-A9"
 	select BR2_ARM_CPU_MAYBE_HAS_NEON
 	select BR2_ARM_CPU_MAYBE_HAS_VFPV3
-	select BR2_ARM_CPU_HAS_THUMB2
+	select BR2_ARM_CPU_HAS_THUMB
 config BR2_cortex_a15
 	bool "cortex-A15"
 	select BR2_ARM_CPU_HAS_NEON

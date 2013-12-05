@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-LIBTHEORA_VERSION = 1.1.1
+LIBTHEORA_VERSION = 1.0
 LIBTHEORA_SOURCE = libtheora-$(LIBTHEORA_VERSION).tar.bz2
 LIBTHEORA_SITE = http://downloads.xiph.org/releases/theora
 LIBTHEORA_INSTALL_STAGING = YES

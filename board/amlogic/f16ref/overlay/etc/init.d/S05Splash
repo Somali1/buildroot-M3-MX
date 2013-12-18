@@ -1,6 +1,8 @@
 #!/bin/sh
 
 if [ "X$1" = "Xstart" ]; then
+  echo "Init fb0, fb1"
+  echo 720p > /sys/class/amhdmitx/amhdmitx0/disp_mode
   echo 1 > /sys/class/graphics/fb0/blank
   echo 1 > /sys/class/graphics/fb1/blank
   # clear them

@@ -41,7 +41,7 @@ config BR2_TARGET_ROOTFS_RECOVERY_AML_ADV_PATH_DATA
 config BR2_TARGET_ROOTFS_RECOVERY_AML_ADV_NFTL
       bool "Board have NFTL (media) partition"
       default n if BR2_BOARD_TYPE_AMLOGIC_M6
-      default y if BR2_BOARD_TYPE_AMLOGIC_M3
+      default n if BR2_BOARD_TYPE_AMLOGIC_M3
       
 config BR2_TARGET_ROOTFS_RECOVERY_AML_ADV_NFTL_PATH
       string "Path to NFTL (media) partition"

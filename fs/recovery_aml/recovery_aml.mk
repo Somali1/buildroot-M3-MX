@@ -16,9 +16,8 @@ endif
 
 ifneq ($(strip $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG)),"")
 
-# Check if recovery.img exists
-  $(if $(wildcard $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG)),,$(fatal recovery.img does not exist (Path: $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG)).))
-
+# Check if recovery kernel exists
+  $(if $(wildcard $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG)),,$(fatal recovery kernel does not exist (Path: $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG)).))
   
   RECOVERY_AML_ARGS += -r
 endif
@@ -113,14 +112,14 @@ endif
 
 ###### Advanced options ######
 
-# If we have provided recovery.img, make sure it's included in update.zip
+# If we have provided recovery kernel, make sure it's included in update.zip
 ifneq ($(strip $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG)),"")
 
 ROOTFS_RECOVERY_AML_CMD += \
-    echo "Copy recovery.img..." && \
-    cp -f $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG) $(BINARIES_DIR)/aml_recovery/recovery.img && 
+    echo "Copy recovery kernel..." && \
+    cp -f $(BR2_TARGET_ROOTFS_RECOVERY_RECOVERY_IMG) $(BINARIES_DIR)/aml_recovery/uImage-recovery && 
 
-ADDITIONAL_FILES += " recovery.img"
+ADDITIONAL_FILES += " uImage-recovery"
 endif
 
 ROOTFS_RECOVERY_AML_CMD += \

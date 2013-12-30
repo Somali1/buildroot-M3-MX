@@ -4,9 +4,9 @@
 #
 #################################################################################
 
-XBMC_VERSION = f63fcaac1af1e53204b4c20429bf76d9f1ddac0a
+XBMC_VERSION = 81c1fae25a5a6e9cf3699be84c3f9bd0956c70fd
 XBMC_SITE_METHOD = git
-XBMC_SITE = git://github.com/Stane1983/xbmc.git
+XBMC_SITE = git://github.com/CoreTech-Development/xbmc.git
 XBMC_INSTALL_STAGING = YES
 XBMC_INSTALL_TARGET = YES
 
@@ -71,6 +71,7 @@ define XBMC_INSTALL_ETC
   cp -f package/thirdparty/xbmc/guisettings.xml $(TARGET_DIR)/usr/share/xbmc/system/
   cp -f package/thirdparty/xbmc/advancedsettings.xml $(TARGET_DIR)/usr/share/xbmc/system/
   cp -f package/thirdparty/xbmc/nobs.xml $(TARGET_DIR)/usr/share/xbmc/system/keymaps/
+  cp -f package/thirdparty/xbmc/variant.gbox.keyboard.xml $(TARGET_DIR)/usr/share/xbmc/system/keymaps/
 endef
 
 ifneq ($(XBMC_REMOTE_CONF),"")

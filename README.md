@@ -1,4 +1,5 @@
 buildroot-mx
 ============
 
-Updated Buildroot for Amlogic MX platform
+Updated Buildroot for Amlogic-M3/MX
+

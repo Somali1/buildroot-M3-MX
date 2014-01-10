@@ -1,7 +1,6 @@
 <advancedsettings>
   <enablenetworkmanager>1</enablenetworkmanager>
   <network>
-    <readbufferfactor>2.0</readbufferfactor>
     <alwaysforcebuffer>1</alwaysforcebuffer>
   </network>
   <showexitbutton>false</showexitbutton>

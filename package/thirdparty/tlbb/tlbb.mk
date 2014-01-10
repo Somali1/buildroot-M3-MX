@@ -1,4 +1,4 @@
-TLBB_VERSION = a4647bcdb82bd0078d2097dca9ff667c3780ed03
+TLBB_VERSION = 41cfadb2f280dddc68dffe8198deddb997dd7e65
 TLBB_SITE_METHOD = git
 TLBB_SITE = https://github.com/Nessus85100/tlbb.git
 TLBB_INSTALL_STAGING = YES

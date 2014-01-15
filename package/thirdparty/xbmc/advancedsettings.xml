@@ -1,8 +1,5 @@
 <advancedsettings>
   <enablenetworkmanager>1</enablenetworkmanager>
-  <network>
-    <alwaysforcebuffer>1</alwaysforcebuffer>
-  </network>
   <showexitbutton>false</showexitbutton>
   <fanartres>720</fanartres>
   <videolibrary>

@@ -5,8 +5,8 @@
 ################################################################################
 
 UTIL_LINUX_VERSION = $(UTIL_LINUX_VERSION_MAJOR).2
-UTIL_LINUX_VERSION_MAJOR = 2.22
-UTIL_LINUX_SOURCE = util-linux-$(UTIL_LINUX_VERSION).tar.bz2
+UTIL_LINUX_VERSION_MAJOR = 2.23
+UTIL_LINUX_SOURCE = util-linux-$(UTIL_LINUX_VERSION).tar.xz
 UTIL_LINUX_SITE = $(BR2_KERNEL_MIRROR)/linux/utils/util-linux/v$(UTIL_LINUX_VERSION_MAJOR)
 
 # README.licensing claims that some files are GPLv2-only, but this is not true.
@@ -28,6 +28,16 @@ HOST_UTIL_LINUX_DEPENDENCIES = host-pkgconf
 ifeq ($(BR2_PACKAGE_BUSYBOX),y)
 UTIL_LINUX_DEPENDENCIES += busybox
 endif
+
+# If we want to use busybox cifs/nfs mounts
+# we need to create some helpers to have busybox handle those mounts
+ifeq ($(BR2_PACKAGE_BUSYBOX),y)
+define UTIL_LINUX_TARGET_HELPERS
+        $(INSTALL) -m 0755 package/util-linux/mount.nfs $(TARGET_DIR)/sbin
+        $(INSTALL) -m 0755 package/util-linux/mount.cifs $(TARGET_DIR)/sbin
+endef
+endif
+UTIL_LINUX_POST_INSTALL_TARGET_HOOKS += UTIL_LINUX_TARGET_HELPERS
 
 ifeq ($(BR2_PACKAGE_NCURSES),y)
 UTIL_LINUX_DEPENDENCIES += ncurses
@@ -84,7 +94,7 @@ HOST_UTIL_LINUX_CONF_OPT += \
 	--disable-login --disable-mount --disable-partx \
 	--disable-pivot_root --disable-rename --disable-schedutils \
 	--disable-su --disable-switch_root --disable-unshare \
-	--disable-uuidd --disable-wall
+	--disable-uuidd --disable-wall --without-ncurses
 
 # Avoid building the tools if they are disabled since we can't install on
 # a per-directory basis.
@@ -105,3 +115,4 @@ $(eval $(host-autotools-package))
 # one, so it disappears
 UTIL_LINUX_INSTALL_STAGING_OPT += MKINSTALLDIRS=$(@D)/config/mkinstalldirs
 UTIL_LINUX_INSTALL_TARGET_OPT += MKINSTALLDIRS=$(@D)/config/mkinstalldirs
+HOST_UTIL_LINUX_INSTALL_OPT += MKINSTALLDIRS=$(@D)/config/mkinstalldirs

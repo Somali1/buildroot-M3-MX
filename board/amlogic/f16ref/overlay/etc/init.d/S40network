@@ -6,7 +6,7 @@
 case "$1" in
   start)
     echo "Starting network..."
-
+    modprobe rtlwifi
     # bump up the default udp/tcp buffersizes
     sysctl -w net.core.rmem_max=33554432
     sysctl -w net.core.netdev_max_backlog=2000

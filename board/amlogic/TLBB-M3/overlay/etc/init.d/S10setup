@@ -35,9 +35,9 @@ if [ "X$1" = "Xstart" ]; then
   #
   echo "S10setup: moving /etc"
   # /etc must be rw, move it to /tmp and bind
-  mkdir -p /tmp/etc
-  cp -a /etc /tmp/
-  mount -o bind /tmp/etc /etc
+  #mkdir -p /tmp/etc
+  #cp -a /etc /tmp/
+  #mount -o bind /tmp/etc /etc
   #
   echo "S10setup: moving /media"
   # /media is where usb drives mount, move it to /tmp and bind

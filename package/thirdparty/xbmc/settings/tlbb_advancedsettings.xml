@@ -14,10 +14,6 @@
     <timeseekbackwardbig>-180</timeseekbackwardbig>
     <subsdelayrange>30</subsdelayrange>
   </video>
-  <pvr>
-    <minvideocachelevel>50</minvideocachelevel>
-    <minaudiocachelevel>50</minaudiocachelevel>
-  </pvr>
   <hidesettings>
     <setting>lookandfeel.soundskin</setting>
     <setting>videoplayer.rendermethod</setting>

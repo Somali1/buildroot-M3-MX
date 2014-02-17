@@ -31,6 +31,7 @@ NETWORK_MANAGER_CONF_OPT = \
 		--with-crypto=gnutls \
 		--disable-ppp \
 		--with-wext=yes \
+		--sysconfdir=/root/.sysconfig \
 		--with-iptables=/usr/sbin/iptables \
 		--disable-ifupdown \
 		--disable-ifnet

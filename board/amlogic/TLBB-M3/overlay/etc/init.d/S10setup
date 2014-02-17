@@ -45,6 +45,8 @@ if [ "X$1" = "Xstart" ]; then
   # Make .sysconfig dir on userdata partition if one does not exist
   if [ ! -d /root/.sysconfig/NetworkManager/system-connections ] ; then
      mkdir -p /root/.sysconfig/NetworkManager/system-connections
+     mkdir -p /root/.sysconfig/NetworkManager/dispatcher.d
+     cp -a /etc/NetworkManager/dispatcher.d/ntpd-script /root/.sysconfig/NetworkManager/dispatcher.d
   fi
 
   # we startup as performance, then switch to ondemand (kernel bug) and

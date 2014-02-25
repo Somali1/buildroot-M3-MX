@@ -41,6 +41,13 @@ if [ "X$1" = "Xstart" ]; then
   mount -t yaffs2 $USERDATA /tmp/userdata
   mkdir -p /tmp/userdata/tlbb/root
   mount -o bind /tmp/userdata/tlbb/root /root
+
+  # Check if favorites.xml exists (TLBB skin-crash at very first run)
+  if [ ! -f /root/.xbmc/userdata/favourites.xml ] ; then
+    echo -n "touching favorites.xml file ... "
+    mkdir -p /root/.xbmc/userdata
+    echo "<favourites></favourites>" > /root/.xbmc/userdata/favourites.xml
+  fi
   
   # we startup as performance, then switch to ondemand (kernel bug) and
   # if m1 or m3, limit to 600Mhz to keep audio hw from stalling.

@@ -47,8 +47,8 @@ if [ "X$1" = "Xstart" ]; then
     echo -n "Creating NetworkManager .sysconfig folder ... "
     mkdir -p /root/.sysconfig/NetworkManager
     cp -a /etc/NetworkManager/* /root/.sysconfig/NetworkManager/
-    mount -o bind /root/.sysconfig/NetworkManager /etc/NetworkManager
   fi
+  mount -o bind /root/.sysconfig/NetworkManager /etc/NetworkManager
 
   # Check if favorites.xml exists (TLBB skin-crash at very first run)
   if [ ! -f /root/.xbmc/userdata/favourites.xml ] ; then

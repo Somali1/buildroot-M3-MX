@@ -58,6 +58,7 @@ kernel/crypto/lzo.ko
 kernel/crypto/rng.ko
 kernel/crypto/krng.ko
 kernel/block/deadline-iosched.ko
+kernel/block/cfq-iosched.ko
 kernel/block/bfq-iosched.ko
 kernel/drivers/amlogic/amports/amvdec_mpeg12.ko
 kernel/drivers/amlogic/amports/amvdec_mpeg4.ko
@@ -74,6 +75,7 @@ kernel/drivers/amlogic/display/ge2d/ge2d.ko
 kernel/drivers/amlogic/display/osd/fb.ko
 kernel/drivers/amlogic/display/vout/am_tvout.ko
 kernel/drivers/amlogic/display/vout2/am_tvout2.ko
+kernel/drivers/amlogic/dvb/aml.ko
 kernel/drivers/amlogic/ethernet/am_net8218.ko
 kernel/drivers/amlogic/i2c/aml_i2c.ko
 kernel/drivers/amlogic/input/keyboard/adc_keypad.ko
@@ -83,9 +85,8 @@ kernel/drivers/amlogic/ppmgr/ppmgr.ko
 kernel/drivers/amlogic/ppmgr/ppmgr3d.ko
 kernel/drivers/amlogic/ppmgr/ppmgr_3d_tv.ko
 kernel/drivers/amlogic/smartcard/amsmc.ko
-kernel/drivers/amlogic/spi_nor/spi_nor.ko
-kernel/drivers/amlogic/spi_nor/apollo_spi_nor.ko
 kernel/drivers/amlogic/usb/dwc_otg/294/dwc_otg.ko
+kernel/drivers/amlogic/wifi/rtl8xxx_CU/8192cu.ko
 kernel/drivers/base/firmware_class.ko
 kernel/drivers/block/loop.ko
 kernel/drivers/cdrom/cdrom.ko

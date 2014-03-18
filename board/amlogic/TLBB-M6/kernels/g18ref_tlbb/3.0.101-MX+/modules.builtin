@@ -1,5 +1,6 @@
 kernel/arch/arm/plat-meson/plat_dev_eth.ko
 kernel/arch/arm/plat-meson/plat_dev_remote.ko
+kernel/kernel/configs.ko
 kernel/fs/binfmt_misc.ko
 kernel/fs/mbcache.ko
 kernel/fs/cifs/cifs.ko
@@ -85,6 +86,8 @@ kernel/drivers/amlogic/ppmgr/ppmgr.ko
 kernel/drivers/amlogic/ppmgr/ppmgr3d.ko
 kernel/drivers/amlogic/ppmgr/ppmgr_3d_tv.ko
 kernel/drivers/amlogic/smartcard/amsmc.ko
+kernel/drivers/amlogic/spi_nor/spi_nor.ko
+kernel/drivers/amlogic/spi_nor/apollo_spi_nor.ko
 kernel/drivers/amlogic/usb/dwc_otg/294/dwc_otg.ko
 kernel/drivers/amlogic/wifi/rtl8xxx_CU/8192cu.ko
 kernel/drivers/base/firmware_class.ko

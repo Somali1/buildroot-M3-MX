@@ -22,7 +22,7 @@ import xbmcaddon
 import xbmcgui
 import os
 
-ID    = 'script.tlbb'
+ID    = 'script.tlbb.m6'
 ADDON = xbmcaddon.Addon(ID)
 
 

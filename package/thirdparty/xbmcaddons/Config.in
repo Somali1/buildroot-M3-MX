@@ -16,5 +16,10 @@ source "package/thirdparty/xbmcaddons/tlbbwizard/Config.in"
 source "package/thirdparty/xbmcaddons/tlbbrepo/Config.in"
 source "package/thirdparty/xbmcaddons/artistslideshow/Config.in"
 source "package/thirdparty/xbmcaddons/artwork_downloader/Config.in"
+source "package/thirdparty/xbmcaddons/plugincache/Config.in"
+source "package/thirdparty/xbmcaddons/favourites/Config.in"
+source "package/thirdparty/xbmcaddons/globalsearch/Config.in"
+source "package/thirdparty/xbmcaddons/libraryeditor/Config.in"
+source "package/thirdparty/xbmcaddons/beautifulsoup/Config.in"
 
 endmenu

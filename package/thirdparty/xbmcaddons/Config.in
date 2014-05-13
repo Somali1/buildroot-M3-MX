@@ -10,5 +10,11 @@ source "package/thirdparty/xbmcaddons/weather_underground/Config.in"
 comment "XBMC scripts"
 
 source "package/thirdparty/xbmcaddons/nm/Config.in"
+source "package/thirdparty/xbmcaddons/hdtrailers_net/Config.in"
+source "package/thirdparty/xbmcaddons/tlbbinstaller/Config.in"
+source "package/thirdparty/xbmcaddons/tlbbwizard/Config.in"
+source "package/thirdparty/xbmcaddons/tlbbrepo/Config.in"
+source "package/thirdparty/xbmcaddons/artistslideshow/Config.in"
+source "package/thirdparty/xbmcaddons/artwork_downloader/Config.in"
 
 endmenu

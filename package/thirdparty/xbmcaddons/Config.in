@@ -21,5 +21,9 @@ source "package/thirdparty/xbmcaddons/favourites/Config.in"
 source "package/thirdparty/xbmcaddons/globalsearch/Config.in"
 source "package/thirdparty/xbmcaddons/libraryeditor/Config.in"
 source "package/thirdparty/xbmcaddons/beautifulsoup/Config.in"
+source "package/thirdparty/xbmcaddons/elementtree/Config.in"
+source "package/thirdparty/xbmcaddons/mechanize/Config.in"
+source "package/thirdparty/xbmcaddons/requests/Config.in"
+source "package/thirdparty/xbmcaddons/requests2/Config.in"
 
 endmenu

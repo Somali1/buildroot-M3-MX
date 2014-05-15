@@ -25,5 +25,13 @@ source "package/thirdparty/xbmcaddons/elementtree/Config.in"
 source "package/thirdparty/xbmcaddons/mechanize/Config.in"
 source "package/thirdparty/xbmcaddons/requests/Config.in"
 source "package/thirdparty/xbmcaddons/requests2/Config.in"
+source "package/thirdparty/xbmcaddons/simple_downloader/Config.in"
+source "package/thirdparty/xbmcaddons/simplejson/Config.in"
+source "package/thirdparty/xbmcaddons/xbmcswift2/Config.in"
+source "package/thirdparty/xbmcaddons/playalbum/Config.in"
+source "package/thirdparty/xbmcaddons/nextaired/Config.in"
+source "package/thirdparty/xbmcaddons/tvtunes/Config.in"
+source "package/thirdparty/xbmcaddons/debuglog/Config.in"
+source "package/thirdparty/xbmcaddons/xbmcbackup/Config.in"
 
 endmenu

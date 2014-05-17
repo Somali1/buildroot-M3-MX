@@ -78,6 +78,7 @@ kernel/drivers/amlogic/gpio/am_gpio.ko
 kernel/drivers/amlogic/hdmi/hdmi_tx/hdmitx.ko
 kernel/drivers/amlogic/input/irremote/remote.ko
 kernel/drivers/amlogic/input/key_input/key_input.ko
+kernel/drivers/amlogic/input/saradc/saradc.ko
 kernel/drivers/amlogic/net/ethernet/ethernet.ko
 kernel/drivers/amlogic/ppmgr/ppmgr.ko
 kernel/drivers/amlogic/spi_nor/spi_nor.ko

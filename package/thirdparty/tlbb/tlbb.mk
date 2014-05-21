@@ -1,6 +1,6 @@
-TLBB_VERSION = 7eb808f95fc060532b3ffc44fc0d1e2bd9651258
+TLBB_VERSION = 545aec9af5a0029ced17fce56e4b632b5125f581
 TLBB_SITE_METHOD = git
-TLBB_SITE = https://github.com/J1nx-Hackable-Gadgets/tlbb.git
+TLBB_SITE = https://github.com/Nessus85100/tlbb.git
 TLBB_INSTALL_STAGING = YES
 TLBB_INSTALL_TARGET = YES
 TLBB_DEPENDENCIES = xbmc

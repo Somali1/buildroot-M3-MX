@@ -3,7 +3,7 @@
 ## Xbmc plugin.video.tlbbinstaller Addon
 #
 ###############################################################################
-TLBBINSTALLER_VERSION = 1.0.6
+TLBBINSTALLER_VERSION = 1.0.7
 TLBBINSTALLER_SOURCE = plugin.video.tlbbinstaller-$(TLBBINSTALLER_VERSION).zip
 TLBBINSTALLER_SITE = http://cloud.thelittleblackbox.co.uk/repo/zips/plugin.video.tlbbinstaller/
 TLBBINSTALLER_INSTALL_STAGING = NO

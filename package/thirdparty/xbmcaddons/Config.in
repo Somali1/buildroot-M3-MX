@@ -34,5 +34,6 @@ source "package/thirdparty/xbmcaddons/tvtunes/Config.in"
 source "package/thirdparty/xbmcaddons/debuglog/Config.in"
 source "package/thirdparty/xbmcaddons/xbmcbackup/Config.in"
 source "package/thirdparty/xbmcaddons/youtube/Config.in"
+source "package/thirdparty/xbmcaddons/parsedom/Config.in"
 
 endmenu

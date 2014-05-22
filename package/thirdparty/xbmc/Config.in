@@ -127,11 +127,11 @@ config BR2_XBMC_ADV_SETTINGS
 		- Remote configuration should be located in "package/thirdparty/xbmc/settings"
 		- Compiler will append ".xml" to end of file name
 
-config BR2_XBMC_GUI_SETTINGS
-        string "GUI settings"
+config BR2_XBMC_SETTINGS
+        string "Default XBMC settings"
         default ""
         help
-          This option will set some pre-configured GUI settings to be used.
+          This option will set some pre-configured settings to be used.
 
 config BR2_XBMC_SPLASH
 	string "Splash Screen"

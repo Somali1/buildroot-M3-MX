@@ -7,6 +7,7 @@ TLBB_DEPENDENCIES = xbmc
 TEXTURE_PACKER=$(XBMC_DIR)/tools/TexturePacker/TexturePacker
 
 define TLBB_BUILD_CMDS
+    	sed -i 's/script.tlbb/script.tlbb.m3/' $(@D)/extras/scripts/update.py
 	$(TEXTURE_PACKER) -use_none -i $(@D)/media -o $(@D)/media/Textures.xbt
 endef
 

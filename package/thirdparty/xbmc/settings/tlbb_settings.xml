@@ -2018,7 +2018,7 @@
       <group id="1">
         <setting id="services.upnpserver" type="boolean" label="21360" help="36323">
           <level>0</level>
-          <default>false</default>
+          <default>true</default>
           <control type="toggle" />
         </setting>
         <setting id="services.upnpannounce" type="boolean" parent="services.upnpserver" label="20188" help="36324">
@@ -2031,7 +2031,7 @@
         </setting>
         <setting id="services.upnpcontroller" type="boolean" label="21361" help="36326">
           <level>1</level>
-          <default>false</default>
+          <default>true</default>
           <dependencies>
             <dependency type="enable" setting="services.upnpserver">true</dependency>
           </dependencies>
@@ -2049,7 +2049,7 @@
       <group id="1">
         <setting id="services.webserver" type="boolean" label="263" help="36328">
           <level>1</level>
-          <default>false</default>
+          <default>true</default>
           <control type="toggle" />
         </setting>
         <setting id="services.webserverport" type="integer" parent="services.webserver" label="730" help="36329">

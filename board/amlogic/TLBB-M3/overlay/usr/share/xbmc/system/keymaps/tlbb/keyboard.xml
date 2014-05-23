@@ -148,7 +148,7 @@
       <down>BigStepBack</down>
       <music>AudioDelay</music>
       <f2>AspectRatio</f2>
-      <red>RunScript(script.xbmc.subtitles)</red>
+      <red>ActivateWindow(subtitlesearch)</red>
       <green>ActivateWindow(OSDVideoSettings)</green>
       <yellow>ActivateWindow(OSDAudioSettings)</yellow>
       <blue>ActivateWindow(VideoBookmarks)</blue>
@@ -266,7 +266,7 @@
       <music>AudioDelay</music>
       <f2>AspectRatio</f2>
       <help>CodecInfo</help>
-      <red>RunScript(special://xbmc/system/keymaps/tlbb/py_ispvr.py,"ActivateWindow(Teletext)","RunScript(script.xbmc.subtitles)")</red>
+      <red>RunScript(special://xbmc/system/keymaps/tlbb/py_ispvr.py,"ActivateWindow(Teletext)","ActivateWindow(subtitlesearch)")</red>
       <green>ActivateWindow(OSDVideoSettings)</green>
       <yellow>ActivateWindow(OSDAudioSettings)</yellow>
       <blue>RunScript(special://xbmc/system/keymaps/tlbb/py_ispvr.py,"PlayerControl(Record)","ActivateWindow(VideoBookmarks)")</blue>
@@ -279,7 +279,7 @@
       <help>CodecInfo</help>
       <music>AudioDelay</music>
       <f2>AspectRatio</f2>
-      <red>RunScript(script.xbmc.subtitles)</red>
+      <red>ActivateWindow(subtitlesearch)</red>
       <green>ActivateWindow(OSDVideoSettings)</green>
       <yellow>ActivateWindow(OSDAudioSettings)</yellow>
       <blue>ActivateWindow(VideoBookmarks)</blue>

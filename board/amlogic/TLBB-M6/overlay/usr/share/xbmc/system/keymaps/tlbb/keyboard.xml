@@ -2,73 +2,120 @@
 <keymap>
   <global>
     <keyboard name="The Little Black Box Remote">
-      <power>XBMC.ActivateWindow(shutdownmenu)</power>			<!-- Button 01 : Power -->
-      <f10>Mute</f10>							<!-- Button 02 : Mute -->
-      <rewind>SkipPrevious</rewind>					<!-- Button 03 : |< -->
-      <play_pause>Play</play_pause>					<!-- Button 04 : ||> -->
-      <f7>SkipNext</f7>							<!-- Button 05 : >| -->
-      <f9>RunScript(script.linux.nm)</f9>				<!-- Button 06 : Wifi -->
-      <f3>Rewind</f3>							<!-- Button 07 : << -->
-      <f8>Stop</f8>							<!-- Button 08 : stop -->
-      <fastforward>FastForward</fastforward>				<!-- Button 09 : >> -->
-      <menu>ActivateWindow(PlayerControls)</menu>			<!-- Button 10 : menu -->
-      <!-- <>mouse on/off</> -->					<!-- Button 11 : mouse (not available for keycode) -->
-      <settings>ActivateWindow(Settings)</settings>			<!-- Button 12 : settings/wheel -->
-      <escape>Back</escape>						<!-- Button 13 : back -->
-      <f12>VolumeUp</f12>						<!-- Button 19 : vol+ -->
-      <f11>VolumeDown</f11>						<!-- Button 20 : vol- -->
-      <pageup>PageUp</pageup>  						<!-- Button 21 : pg+ -->
-      <pagedown>PageDown</pagedown>					<!-- Button 22 : pg- -->
-      <f4>ActivateWindow(Home)</f4>					<!-- Button 23 : home -->
-      <f1>ContextMenu</f1>						<!-- Button 24 : = -->
-      <music>ActivateWindow(Music)</music>				<!-- Button 28 : music -->
-      <movies>ActivateWindow(Videos,MovieTitles)</movies>		<!-- Button 32 : movies -->
-      <series>ActivateWindow(Videos,TvShowTitles)</series>		<!-- Button 36 : series -->
-      <help>Info</help>							<!-- Button 37 : info -->
-      <backspace>Back</backspace>					<!-- Button 39 : back -->
-      <f2>ActivateWindow(Pictures)</f2> 				<!-- Button 40 : pictures -->
-      <red>Close</red>  						<!-- Button 41 : red -->
-      <green>Close</green>						<!-- Button 42 : green -->
-      <yellow>Close</yellow>						<!-- Button 43 : yellow -->
-      <blue>FullScreen</blue>						<!-- Button 44 : blue -->
+      <power>ActivateWindow(ShutdownMenu)</power>     <!-- Button 01 : Power -->
+      <f10>Mute</f10>																	<!-- Button 02 : Mute -->
+      <rewind>SkipPrevious</rewind>										<!-- Button 03 : SkipPrevious -->
+      <play_pause>Play</play_pause>										<!-- Button 04 : Play/Pause -->
+      <f7>SkipNext</f7>																<!-- Button 05 : SkipNext -->
+      <f9>RunScript(script.linux.nm)</f9>							<!-- Button 06 : WiFi -->
+      <f3>Rewind</f3>																	<!-- Button 07 : Rewind -->
+      <f8>Stop</f8>																		<!-- Button 08 : Stop -->
+      <fastforward>FastForward</fastforward>					<!-- Button 09 : FastForward -->
+      <menu>ActivateWindow(PlayerControls)</menu>			<!-- Button 10 : Menu -->
+      <!-- <>mouse on/off</> -->											<!-- Button 11 : Mouse (not available for keycode) -->
+      <settings>ActivateWindow(Settings)</settings>		<!-- Button 12 : Settings/wheel -->
+      <escape>PreviousMenu</escape>						<!-- Button 13 : Back -->
+      <f12>VolumeUp</f12>						          <!-- Button 19 : Vol+ -->
+      <f11>VolumeDown</f11>						        <!-- Button 20 : Vol- -->
+      <pageup>PageUp</pageup>  				        <!-- Button 21 : PG Up+ -->
+      <!-- <pagedown>PageDown</pagedown>		  <!-- Button 22 : PG Down- -->
+      <pagedown>Screenshot</pagedown>		      <!-- Button 22 : PG Down- -->
+      <f4>ActivateWindow(Home)</f4>					  <!-- Button 23 : Home -->
+      <f1>ContextMenu</f1>						        <!-- Button 24 : Context Menu -->
+      <music>ActivateWindow(MusicFiles)</music>									  <!-- Button 28 : Music -->
+      <movies>ActivateWindow(Videos,MovieTitles,return)</movies>  <!-- Button 32 : Movies -->
+      <series>ActivateWindow(Videos,TvShowTitles,return)</series>	<!-- Button 36 : Series -->
+      <help>Info</help>												<!-- Button 37 : Info -->
+      <backspace>Back</backspace>					    <!-- Button 39 : Back -->
+      <f2>ActivateWindow(Pictures)</f2> 	    <!-- Button 40 : Pictures -->
+      <red>Close</red>  							        <!-- Button 41 : RED -->
+      <green>Close</green>						        <!-- Button 42 : GREEN -->
+      <yellow>Close</yellow>					        <!-- Button 43 : YELLOW -->
+      <blue>FullScreen</blue>					        <!-- Button 44 : BLUE -->
     </keyboard>
   </global>
   <LoginScreen>
     <keyboard name="The Little Black Box Remote">
-      <!-- Empty -->
+    <!-- Empty -->
     </keyboard>
   </LoginScreen>
   <Home>
     <keyboard name="The Little Black Box Remote">
       <help>ActivateWindow(1111)</help>
+      <settings>ActivateWindow(1115)</settings>
       <!--<f4>FullScreen</f4>-->
       <f1>Playlist</f1>
       <zero>Playlist</zero>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
     </keyboard>
   </Home>
   <SystemInfo>
     <keyboard name="The Little Black Box Remote">
       <help>Back</help>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
     </keyboard>
   </SystemInfo>
   <Programs>
     <keyboard name="The Little Black Box Remote">
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
     </keyboard>
   </Programs>
   <Settings>
     <keyboard name="The Little Black Box Remote">
-      <settings>Back</settings>
+	    <settings>Back</settings>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
-	<help>ActivateWindow(1111)</help>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
+	    <help>ActivateWindow(1111)</help>
     </keyboard>
   </Settings>
+  <AppearanceSettings>
+    <keyboard name="The Little Black Box Remote">
+      <settings>SetFocus(9111)</settings>
+    </keyboard>
+  </AppearanceSettings>
+  <VideosSettings>
+    <keyboard name="The Little Black Box Remote">
+      <settings>SetFocus(9111)</settings>
+    </keyboard>
+  </VideosSettings>  
+  <PVRSettings>
+    <keyboard name="The Little Black Box Remote">
+      <settings>SetFocus(9111)</settings>
+    </keyboard>
+  </PVRSettings>
+  <MusicSettings>
+	  <keyboard name="The Little Black Box Remote">
+	    <settings>SetFocus(9111)</settings>
+	  </keyboard>
+  </MusicSettings>
+  <PicturesSettings>
+    <keyboard name="The Little Black Box Remote">
+      <settings>SetFocus(9111)</settings>
+    </keyboard>
+  </PicturesSettings>
+  <WeatherSettings>
+    <keyboard name="The Little Black Box Remote">
+      <settings>SetFocus(9111)</settings>
+    </keyboard>
+  </WeatherSettings>
+  <NetworkSettings>
+    <keyboard name="The Little Black Box Remote">
+      <settings>SetFocus(9111)</settings>
+    </keyboard>
+  </NetworkSettings>
+  <SystemSettings>
+    <keyboard name="The Little Black Box Remote">
+      <settings>SetFocus(9111)</settings>
+    </keyboard>
+  </SystemSettings>
+  <SkinSettings>
+    <keyboard name="The Little Black Box Remote">
+      <settings>SetFocus(9111)</settings>
+    </keyboard>
+  </SkinSettings>
   <VirtualKeyboard>
     <keyboard name="The Little Black Box Remote">
       <backspace>Backspace</backspace>
@@ -76,23 +123,23 @@
   </VirtualKeyboard>
   <MyFiles>
     <keyboard name="The Little Black Box Remote">
-	<settings>SetFocus(9111)</settings>
+	    <settings>SetFocus(9111)</settings>
       <red>Container.NextViewMode</red>
       <green>Info</green>
       <yellow>SendClick(8)</yellow>
-	  <blue>SendClick(3)</blue>
+	    <blue>SendClick(3)</blue>
     </keyboard>
   </MyFiles>
   <MyMusicPlaylist>
     <keyboard name="The Little Black Box Remote">
-	<settings>SetFocus(9111)</settings>
+	    <settings>SetFocus(9111)</settings>
       <zero>Back</zero>
       <pageup>MoveItemUp</pageup>
       <pagedown>MoveItemDown</pagedown>
       <red>Container.NextViewMode</red>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
-	<help>Info</help>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
+	    <help>Info</help>
     </keyboard>
   </MyMusicPlaylist>
   <MyMusicPlaylistEditor>
@@ -101,7 +148,7 @@
       <pagedown>MoveItemDown</pagedown>
       <red>Delete</red>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
     </keyboard>
   </MyMusicPlaylistEditor>
   <MyMusicFiles>
@@ -111,8 +158,8 @@
       <red>Container.NextViewMode</red>
       <green>Info</green>
       <yellow>SendClick(8)</yellow>
-	  <blue>SendClick(3)</blue>
-	<help>Info</help>
+	    <blue>SendClick(3)</blue>
+	    <help>Info</help>
     </keyboard>
   </MyMusicFiles>
   <MyMusicLibrary>
@@ -122,20 +169,15 @@
       <red>Container.NextViewMode</red>
       <green>Info</green>
       <yellow>SendClick(8)</yellow>
-	  <blue>SendClick(3)</blue>
-	<help>Info</help>
+	    <blue>SendClick(3)</blue>
+			<help>Info</help>
     </keyboard>
   </MyMusicLibrary>
-  <MusicSettings>
-    <keyboard name="The Little Black Box Remote">
-      <settings>Back</settings>
-    </keyboard>
-  </MusicSettings>
  <FullscreenVideo>
     <keyboard name="The Little Black Box Remote">
-	<settings>ActivateWindow(OSDVideoSettings)</settings>
-	<pageup>subtitledelayplus</pageup>
-	<pagedown>subtitledelayminus</pagedown>
+			<settings>ActivateWindow(OSDVideoSettings)</settings>
+			<pageup>subtitledelayplus</pageup>
+			<pagedown>subtitledelayminus</pagedown>
       <fastforward>FastForward</fastforward>
       <f3>Rewind</f3>
       <backspace>Fullscreen</backspace>
@@ -148,7 +190,7 @@
       <down>BigStepBack</down>
       <music>AudioDelay</music>
       <f2>AspectRatio</f2>
-      <red>RunScript(script.xbmc.subtitles)</red>
+      <red>ActivateWindow(SubtitleSearch)</red> --------------------------------------
       <green>ActivateWindow(OSDVideoSettings)</green>
       <yellow>ActivateWindow(OSDAudioSettings)</yellow>
       <blue>ActivateWindow(VideoBookmarks)</blue>
@@ -177,7 +219,7 @@
   </PlayerControls>
   <Visualisation>
     <keyboard name="The Little Black Box Remote">
-	<settings>ActivateWindow(1112)</settings>
+	    <settings>ActivateWindow(1112)</settings>
       <c>RunScript(special://xbmc/system/keymaps/tlbb/py_ispvr.py,"ActivateWindow(PVROSDChannels)","ActivateWindow(MusicPlaylist)")</c>
       <fastforward>FastForward</fastforward>
       <f3>Rewind</f3>
@@ -198,6 +240,7 @@
   </Visualisation>
   <MusicOSD>
     <keyboard name="The Little Black Box Remote">
+	    <settings>ActivateWindow(1112)</settings>
       <fastforward>FastForward</fastforward>
       <f3>Rewind</f3>
       <f7>SkipNext</f7>
@@ -243,7 +286,7 @@
       <pagedown>ZoomOut</pagedown>
       <return>Rotate</return>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
     </keyboard>
   </SlideShow>
   <ScreenCalibration>
@@ -266,7 +309,7 @@
       <music>AudioDelay</music>
       <f2>AspectRatio</f2>
       <help>CodecInfo</help>
-      <red>RunScript(special://xbmc/system/keymaps/tlbb/py_ispvr.py,"ActivateWindow(Teletext)","RunScript(script.xbmc.subtitles)")</red>
+      <red>RunScript(special://xbmc/system/keymaps/tlbb/py_ispvr.py,"ActivateWindow(Teletext)","ActivateWindow(SubtitleSearch)")</red>
       <green>ActivateWindow(OSDVideoSettings)</green>
       <yellow>ActivateWindow(OSDAudioSettings)</yellow>
       <blue>RunScript(special://xbmc/system/keymaps/tlbb/py_ispvr.py,"PlayerControl(Record)","ActivateWindow(VideoBookmarks)")</blue>
@@ -279,7 +322,7 @@
       <help>CodecInfo</help>
       <music>AudioDelay</music>
       <f2>AspectRatio</f2>
-      <red>RunScript(script.xbmc.subtitles)</red>
+      <red>ActivateWindow(SubtitleSearch)</red>
       <green>ActivateWindow(OSDVideoSettings)</green>
       <yellow>ActivateWindow(OSDAudioSettings)</yellow>
       <blue>ActivateWindow(VideoBookmarks)</blue>
@@ -313,7 +356,7 @@
       <red>Container.NextViewMode</red>
       <green>Info</green>
       <yellow>SendClick(8)</yellow>
-	  <blue>SendClick(3)</blue>
+	    <blue>SendClick(3)</blue>
       <zero>ActivateWindow(VideoPlaylist)</zero>
       <nine>ToggleWatched</nine> 
     </keyboard>
@@ -325,41 +368,31 @@
       <red>Container.NextViewMode</red>
       <green>Info</green>
       <yellow>SendClick(8)</yellow>
-	  <blue>SendClick(3)</blue>
+	    <blue>SendClick(3)</blue>
       <nine>ToggleWatched</nine> 
     </keyboard>
   </MyVideoFiles>
   <MyVideoPlaylist>
     <keyboard name="The Little Black Box Remote">
-	<settings>SetFocus(9111)</settings>
+	    <settings>SetFocus(9111)</settings>
       <zero>Back</zero>
       <pageup>MoveItemUp</pageup>
       <pagedown>MoveItemDown</pagedown>
       <red>Delete</red>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
     </keyboard>
   </MyVideoPlaylist>
-  <VideosSettings>
-    <keyboard name="The Little Black Box Remote">
-      <settings>Back</settings>
-    </keyboard>
-  </VideosSettings>
   <MyPictures>
     <keyboard name="The Little Black Box Remote">
       <settings>SetFocus(9111)</settings>
       <red>Container.NextViewMode</red>
       <yellow>SendClick(7)</yellow>
-	<green>Info</green>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
-	<help>Info</help>
+	    <green>Info</green>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
+	    <help>Info</help>
     </keyboard>
   </MyPictures>
-  <PicturesSettings>
-    <keyboard name="The Little Black Box Remote">
-      <settings>Back</settings>
-    </keyboard>
-  </PicturesSettings>
   <ContextMenu>
     <keyboard name="The Little Black Box Remote">
       <menu>Back</menu>
@@ -369,7 +402,7 @@
     <keyboard name="The Little Black Box Remote">
       <help>Info</help>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
     </keyboard>
   </Scripts>
   <MusicInformation>
@@ -405,7 +438,7 @@
   </Favourites>
   <NumericInput>
     <keyboard name="The Little Black Box Remote">
-      <backspace>Close</backspace>
+      <backspace>Backspace</backspace>
     </keyboard>
   </NumericInput>
   <FullscreenLiveTV>
@@ -476,7 +509,7 @@
       <red>Delete</red>
       <green>Highlight</green>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
     </keyboard>
   </FileBrowser>
   <ShutdownMenu>
@@ -496,20 +529,23 @@
   </AddonSettings>
   <Weather>
     <keyboard name="The Little Black Box Remote">
-      <settings>ActivateWindow(WeatherSettings)</settings>
+	    <settings>SetFocus(9111)</settings>
       <yellow>ActivateWindow(Favourites)</yellow>
-	  <blue>ActivateWindow(Videos,Video Add-ons)</blue>
+	    <blue>ActivateWindow(Videos,Addons,return)</blue>
     </keyboard>
   </Weather>
-  <WeatherSettings>
-    <keyboard name="The Little Black Box Remote">
-      <settings>Back</settings>
-    </keyboard>
-  </WeatherSettings>
   <SliderDialog>
     <keyboard name="The Little Black Box Remote">
       <music>Back</music>
     </keyboard>
   </SliderDialog>
+  <window1111>
+    <keyboard name="The Little Black Box Remote">
+      <!-- <red>SendClick(81)</red> --> <!-- NOT WORKING -->
+      <!-- <red>Control.Message(81,click,1111)</red> --> <!-- NOT WORKING -->
+      <blue>Control.Move(4001,1)</blue>
+      <yellow>Control.Move(4001,-1)</yellow>
+    </keyboard>
+  </window1111>
 </keymap>
 

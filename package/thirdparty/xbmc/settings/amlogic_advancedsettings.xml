@@ -23,8 +23,6 @@
   </network>
 
   <audiooutput>
-    <ac3passthrough>false</ac3passthrough>
-    <dtspassthrough>false</dtspassthrough>
     <truehdpassthrough>false</truehdpassthrough>
     <dtshdpassthrough>false</dtshdpassthrough>
     <audiodevice>ALSA:@</audiodevice>

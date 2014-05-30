@@ -17,11 +17,6 @@
     <audiodelayrange>60</audiodelayrange>
   </video>
 
-  <network>
-    <readbufferfactor>4.0</readbufferfactor>
-    <buffermode>1</buffermode>
-  </network>
-
   <audiooutput>
     <truehdpassthrough>false</truehdpassthrough>
     <dtshdpassthrough>false</dtshdpassthrough>

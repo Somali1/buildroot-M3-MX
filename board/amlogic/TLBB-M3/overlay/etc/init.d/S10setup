@@ -37,11 +37,25 @@ if [ "X$1" = "Xstart" ]; then
     fi
   done
 
-  mkdir -p /tmp/userdata
-  mount -t yaffs2 $USERDATA /tmp/userdata
-  mkdir -p /tmp/userdata/tlbb/root
+  # GOD MODE SYSTEM
+  mkdir -p /tmp/userdata                                                        
+  mkdir -p /tmp/userdataraw                                                   
+  mount -t yaffs2 $USERDATA /tmp/userdataraw                                    
+  mkdir -p /tmp/userdataraw/image                                             
+  if [ ! -f /tmp/userdataraw/image/userdata-ext2.img ] ; then                   
+    lzopcat /usr/share/splash/starting.fb.lzo > /dev/fb0
+    echo -n "Creating userdata loop image, this can take a while ... "          
+    dd if=/dev/zero of=/tmp/userdataraw/image/userdata-ext2.img bs=1M count=3000 
+    echo -n "Creating ext2 partition on loop image ... "                        
+    mke2fs -F -t ext2 /tmp/userdataraw/image/userdata-ext2.img
+    lzopcat /usr/share/splash/starting.fb.lzo > /dev/fb0
+  fi                                                                            
+                                                                                
+  e2fsck -y /tmp/userdataraw/image/userdata-ext2.img                            
+  mount -t ext2 -o loop /tmp/userdataraw/image/userdata-ext2.img /tmp/userdata  
+  mkdir -p /tmp/userdata/tlbb/root                                              
   mount -o bind /tmp/userdata/tlbb/root /root
-
+  
   # Check if NetworkManager system folder exists on userdata
   if [ ! -d /root/.sysconfig/NetworkManager ] ; then
     echo -n "Creating NetworkManager .sysconfig folder ... "

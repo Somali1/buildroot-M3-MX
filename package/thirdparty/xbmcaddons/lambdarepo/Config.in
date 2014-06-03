@@ -1,6 +1,0 @@
-config BR2_PACKAGE_XBMC_ADDON_TLBBREPO
-    bool "repository.tlbb"
-    default n
-    help
-      TLBB repository
-

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_XBMC_ADDON_GOMOVIES
+    bool "plugin.video.GOmovies"
+    default n
+    help
+      GOmovies

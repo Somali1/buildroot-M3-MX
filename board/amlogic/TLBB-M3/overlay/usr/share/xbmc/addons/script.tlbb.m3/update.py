@@ -35,7 +35,7 @@ def checkForUpdate(silent = 1):
         
     if silent == '4':
         try:
-            url      = 'http://cloud.thelittleblackbox.co.uk/manual.m3.php'
+            url      = 'http://navixhardware.com/manual.m3.php'
             response = urllib2.urlopen(url).read()
         except:
             return []
@@ -91,7 +91,7 @@ def setAlarm(mins):
 
 def getResponse():
     try:
-        url      = 'http://cloud.thelittleblackbox.co.uk/ota.m3.php'
+        url      = 'http://navixhardware.com/ota.m3.php'
         response = urllib2.urlopen(url).read()
     except:
         return []

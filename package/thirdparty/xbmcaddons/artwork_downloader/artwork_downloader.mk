@@ -3,7 +3,7 @@
 ## Xbmc script.artwork.downloader Addon
 #
 ###############################################################################
-ARTWORK_DOWNLOADER_VERSION = 12.0.25
+ARTWORK_DOWNLOADER_VERSION = 12.0.28
 ARTWORK_DOWNLOADER_SOURCE = script.artwork.downloader-$(ARTWORK_DOWNLOADER_VERSION).zip
 ARTWORK_DOWNLOADER_SITE = http://mirrors.xbmc.org/addons/frodo/script.artwork.downloader/
 ARTWORK_DOWNLOADER_INSTALL_STAGING = NO

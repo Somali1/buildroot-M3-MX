@@ -39,5 +39,6 @@ source "package/thirdparty/xbmcaddons/extendedinfo/Config.in"
 source "package/thirdparty/xbmcaddons/metadata/Config.in"
 source "package/thirdparty/xbmcaddons/videolanguage/Config.in"
 source "package/thirdparty/xbmcaddons/widgets/Config.in"
+source "package/thirdparty/xbmcaddons/gojailbreak/Config.in"
 
 endmenu

@@ -13,7 +13,7 @@ define gojailbreak_EXTRACT_CMDS
 endef
 
 define gojailbreak_INSTALL_TARGET_CMDS
-	cp -rf $(@D)/plugin.video.gojailbreak $(TARGET_DIR)/usr/share/xbmc/
+	cp -rf $(@D)/* $(TARGET_DIR)/usr/share/xbmc/
 endef
 
 $(eval $(call xbmc-addon,package/thirdparty/xbmcaddons,gojailbreak))

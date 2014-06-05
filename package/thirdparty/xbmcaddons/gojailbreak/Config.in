@@ -1,4 +1,4 @@
-config BR2_PACKAGE_XBMC_ADDON_gojailbreak
+config BR2_PACKAGE_XBMC_ADDON_GOJAILBREAK
     bool "gojailbreak"
     default n
     help

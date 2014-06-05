@@ -17,3 +17,4 @@ define gojailbreak_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(call xbmc-addon,package/thirdparty/xbmcaddons,gojailbreak))
+
